@@ -1,4 +1,3 @@
-#Don Pest Control
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,52 +5,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Big Don's Pest Control Service</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        /* General Reset */
+        body, h1, h2, p, ul {
             margin: 0;
             padding: 0;
+            font-family: Arial, sans-serif;
         }
+
+        body {
+            background-color: #121212; /* Silky Black */
+            color: #C0C0C0; /* Silver Text */
+            line-height: 1.6;
+        }
+
         header {
-            background-color: #4CAF50;
-            color: white;
+            background-color: #333333; /* Darker gray for contrast */
+            color: #C0C0C0;
             text-align: center;
             padding: 20px;
+            border-bottom: 2px solid #C0C0C0;
         }
+
         header img {
             max-width: 150px;
         }
+
+        h1 {
+            font-size: 2rem;
+        }
+
         nav {
             width: 200px;
-            background-color: ##121212;
-            border-right: 1px solid #ddd;
+            background-color: #1A1A1A; /* Dark Black */
+            border-right: 1px solid #C0C0C0;
             position: fixed;
             top: 0;
             bottom: 0;
             padding: 20px;
         }
+
+        nav h2 {
+            color: #C0C0C0;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
         nav ul {
             list-style-type: none;
-            padding: 0;
         }
+
         nav ul li {
             margin: 15px 0;
         }
+
         nav ul li select {
             width: 100%;
             padding: 10px;
+            background-color: #333333;
+            color: #C0C0C0;
+            border: 1px solid #C0C0C0;
+            border-radius: 5px;
         }
+
         main {
             margin-left: 220px;
             padding: 20px;
         }
+
         .description, .flyer {
             margin-bottom: 20px;
         }
+
         .flyer img {
             max-width: 100%;
-            border: 1px solid #ddd;
+            border: 2px solid #C0C0C0; /* Silver border around flyer image */
             border-radius: 5px;
         }
+
+        footer {
+            background-color: #333333;
+            color: #C0C0C0;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
     </style>
 </head>
 <body>
@@ -88,5 +128,9 @@
             <img src="IMG_1981.jpg" alt="Big Don's Pest Control Flyer">
         </section>
     </main>
+
+    <footer>
+        <p>&copy; 2024 Big Don's Pest Control Service. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
