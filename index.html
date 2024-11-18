@@ -13,13 +13,17 @@
         }
 
         body {
-            background-color: #121212; /* Silky Black */
+            background-image: url('IMG_1981.jpg'); /* Set flyer image as background */
+            background-size: cover; /* Ensure background covers entire body */
+            background-position: center; /* Center the background */
+            background-attachment: fixed; /* Keep the background fixed when scrolling */
             color: #C0C0C0; /* Silver Text */
             line-height: 1.8; /* Increased line height for readability */
+            background-blur: 5px; /* Add a slight blur effect to the background */
         }
 
         header {
-            background-color: #333333; /* Darker gray for contrast */
+            background-color: rgba(51, 51, 51, 0.7); /* Dark semi-transparent background */
             color: #C0C0C0;
             text-align: center;
             padding: 30px;
@@ -39,7 +43,7 @@
 
         nav {
             width: 220px;
-            background-color: #1A1A1A; /* Dark Black */
+            background-color: rgba(26, 26, 26, 0.85); /* Dark semi-transparent background for navigation */
             border-right: 1px solid #C0C0C0;
             position: fixed;
             top: 0;
@@ -114,6 +118,8 @@
         main {
             margin-left: 250px;
             padding: 40px 30px; /* More padding around the main content */
+            background-color: rgba(18, 18, 18, 0.85); /* Semi-transparent background */
+            border-radius: 10px;
         }
 
         .description, .flyer {
@@ -130,16 +136,8 @@
             margin-bottom: 20px; /* Space below paragraph */
         }
 
-        .flyer img {
-            max-width: 100%;
-            border: 2px solid #C0C0C0; /* Silver border around flyer image */
-            border-radius: 5px;
-            padding: 10px; /* Padding inside the image border */
-            margin-top: 20px; /* Space above the image */
-        }
-
         footer {
-            background-color: #333333;
+            background-color: rgba(51, 51, 51, 0.7); /* Semi-transparent footer */
             color: #C0C0C0;
             text-align: center;
             padding: 20px;
@@ -208,4 +206,5 @@
     </script>
 </body>
 </html>
+
 
