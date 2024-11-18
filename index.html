@@ -5,52 +5,147 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Big Don's Pest Control Service</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        /* General Reset */
+        body, h1, h2, p, ul {
             margin: 0;
             padding: 0;
+            font-family: Arial, sans-serif;
         }
+
+        body {
+            background-color: #121212; /* Silky Black */
+            color: #C0C0C0; /* Silver Text */
+            line-height: 1.8; /* Increased line height for readability */
+        }
+
         header {
-            background-color: #4CAF50;
-            color: white;
+            background-color: #333333; /* Darker gray for contrast */
+            color: #C0C0C0;
             text-align: center;
-            padding: 20px;
+            padding: 30px;
+            border-bottom: 2px solid #C0C0C0;
+            margin-bottom: 40px; /* Space below header */
         }
+
         header img {
             max-width: 150px;
+            margin-bottom: 20px; /* Space below the logo */
         }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-top: 20px; /* Space between logo and title */
+        }
+
         nav {
-            width: 200px;
-            background-color: #121212;
-            border-right: 1px solid #ddd;
+            width: 220px;
+            background-color: #1A1A1A; /* Dark Black */
+            border-right: 1px solid #C0C0C0;
             position: fixed;
             top: 0;
             bottom: 0;
-            padding: 20px;
+            padding: 40px 20px; /* More padding in the navigation */
+            display: none; /* Hidden by default */
+            transition: all 0.3s ease;
         }
+
+        nav h2 {
+            color: #C0C0C0;
+            font-size: 1.4rem;
+            margin-bottom: 30px; /* Increased space between header and list */
+        }
+
         nav ul {
             list-style-type: none;
             padding: 0;
         }
+
         nav ul li {
-            margin: 15px 0;
+            margin-bottom: 25px; /* Increased space between each list item */
         }
+
         nav ul li select {
             width: 100%;
-            padding: 10px;
+            padding: 15px; /* More padding inside the select */
+            background-color: #333333;
+            color: #C0C0C0;
+            border: 1px solid #C0C0C0;
+            border-radius: 5px;
+            font-size: 1rem; /* Increased font size for better readability */
         }
+
+        /* Hamburger menu styling */
+        .hamburger {
+            display: block;
+            width: 30px;
+            height: 25px;
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            cursor: pointer;
+            z-index: 2;
+        }
+
+        .hamburger div {
+            width: 100%;
+            height: 5px;
+            background-color: #C0C0C0;
+            margin: 5px 0;
+            transition: all 0.3s ease;
+        }
+
+        /* Toggle the hamburger lines to X */
+        .hamburger.open div:nth-child(1) {
+            transform: rotate(45deg);
+            position: relative;
+            top: 8px;
+        }
+
+        .hamburger.open div:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.open div:nth-child(3) {
+            transform: rotate(-45deg);
+            position: relative;
+            top: -8px;
+        }
+
         main {
-            margin-left: 220px;
-            padding: 20px;
+            margin-left: 250px;
+            padding: 40px 30px; /* More padding around the main content */
         }
+
         .description, .flyer {
-            margin-bottom: 20px;
+            margin-bottom: 40px; /* Increased space between sections */
         }
+
+        .description h2, .flyer h2 {
+            font-size: 2rem;
+            margin-bottom: 20px; /* Space between section title and content */
+        }
+
+        .description p {
+            font-size: 1.2rem;
+            margin-bottom: 20px; /* Space below paragraph */
+        }
+
         .flyer img {
             max-width: 100%;
-            border: 1px solid #ddd;
+            border: 2px solid #C0C0C0; /* Silver border around flyer image */
             border-radius: 5px;
+            padding: 10px; /* Padding inside the image border */
+            margin-top: 20px; /* Space above the image */
         }
+
+        footer {
+            background-color: #333333;
+            color: #C0C0C0;
+            text-align: center;
+            padding: 20px;
+            margin-top: 60px; /* Space above the footer */
+        }
+
     </style>
 </head>
 <body>
@@ -59,7 +154,14 @@
         <h1>Big Don's Pest Control Service</h1>
     </header>
 
-    <nav>
+    <!-- Hamburger Menu Icon -->
+    <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <nav id="navMenu">
         <h2>Our Services</h2>
         <ul>
             <li>
@@ -87,8 +189,26 @@
             <img src="IMG_1981.jpg" alt="Big Don's Pest Control Flyer">
         </section>
     </main>
+
+    <footer>
+        <p>&copy; 2024 Big Don's Pest Control Service. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            var nav = document.getElementById('navMenu');
+            var hamburger = document.querySelector('.hamburger');
+
+            // Toggle the menu visibility
+            nav.style.display = (nav.style.display === 'block') ? 'none' : 'block';
+            
+            // Toggle the hamburger icon animation
+            hamburger.classList.toggle('open');
+        }
+    </script>
 </body>
 </html>
+
 
 
 
