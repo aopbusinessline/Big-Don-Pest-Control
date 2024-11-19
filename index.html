@@ -9,50 +9,68 @@
         body, h1, h2, p, ul {
             margin: 0;
             padding: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
         }
 
         body {
             background-color: #121212; /* Silky Black */
-            color: #C0C0C0; /* Silver Text */
-            line-height: 1.8; /* Increased line height for readability */
+            color: #EAEAEA; /* Light Gray for text */
+            line-height: 1.8;
+            font-size: 16px;
         }
 
         header {
-            background-color: #333333; /* Darker gray for contrast */
-            color: #C0C0C0;
+            background-color: #1F1F1F; /* Dark Gray for header */
+            color: #EAEAEA;
             text-align: center;
-            padding: 30px;
-            border-bottom: 2px solid #C0C0C0;
-            margin-bottom: 40px; /* Space below header */
+            padding: 40px 20px;
+            border-bottom: 3px solid #EAEAEA;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+            transition: background-color 0.3s ease;
+        }
+
+        header:hover {
+            background-color: #333333;
         }
 
         header img {
-            max-width: 150px;
-            margin-bottom: 20px; /* Space below the logo */
+            max-width: 180px;
+            margin-bottom: 20px;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+        }
+
+        header img:hover {
+            transform: scale(1.1); /* Slight zoom effect */
         }
 
         h1 {
-            font-size: 2.5rem;
-            margin-top: 20px; /* Space between logo and title */
+            font-size: 2.8rem;
+            margin-top: 20px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
         }
 
         nav {
-            width: 220px;
-            background-color: #1A1A1A; /* Dark Black */
-            border-right: 1px solid #C0C0C0;
+            width: 250px;
+            background-color: #2A2A2A;
             position: fixed;
             top: 0;
             bottom: 0;
-            padding: 40px 20px; /* More padding in the navigation */
-            display: none; /* Hidden by default */
+            left: 0;
+            padding: 50px 20px;
+            display: none;
             transition: all 0.3s ease;
+            box-shadow: 3px 0 8px rgba(0, 0, 0, 0.6);
         }
 
         nav h2 {
-            color: #C0C0C0;
-            font-size: 1.4rem;
-            margin-bottom: 30px; /* Increased space between header and list */
+            color: #EAEAEA;
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         nav ul {
@@ -61,26 +79,30 @@
         }
 
         nav ul li {
-            margin-bottom: 25px; /* Increased space between each list item */
+            margin-bottom: 25px;
         }
 
         nav ul li select {
             width: 100%;
-            padding: 15px; /* More padding inside the select */
+            padding: 15px;
             background-color: #333333;
-            color: #C0C0C0;
-            border: 1px solid #C0C0C0;
+            color: #EAEAEA;
+            border: 1px solid #EAEAEA;
             border-radius: 5px;
-            font-size: 1rem; /* Increased font size for better readability */
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
         }
 
-        /* Hamburger menu styling */
+        nav ul li select:hover {
+            background-color: #555555;
+        }
+
         .hamburger {
             display: block;
-            width: 30px;
-            height: 25px;
+            width: 35px;
+            height: 30px;
             position: absolute;
-            top: 25px;
+            top: 30px;
             right: 25px;
             cursor: pointer;
             z-index: 2;
@@ -89,12 +111,11 @@
         .hamburger div {
             width: 100%;
             height: 5px;
-            background-color: #C0C0C0;
+            background-color: #EAEAEA;
             margin: 5px 0;
             transition: all 0.3s ease;
         }
 
-        /* Toggle the hamburger lines to X */
         .hamburger.open div:nth-child(1) {
             transform: rotate(45deg);
             position: relative;
@@ -113,42 +134,71 @@
 
         main {
             margin-left: 250px;
-            padding: 40px 30px; /* More padding around the main content */
+            padding: 50px 40px;
+            transition: margin-left 0.3s ease;
         }
 
         .description, .flyer {
-            margin-bottom: 40px; /* Increased space between sections */
+            margin-bottom: 60px;
         }
 
         .description h2, .flyer h2 {
-            font-size: 2rem;
-            margin-bottom: 20px; /* Space between section title and content */
+            font-size: 2.5rem;
+            margin-bottom: 25px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #FFD700; /* Golden color for headings */
         }
 
         .description p {
-            font-size: 1.2rem;
-            margin-bottom: 20px; /* Space below paragraph */
+            font-size: 1.3rem;
+            color: #D3D3D3;
+            margin-bottom: 20px;
+            line-height: 1.6;
         }
 
         .flyer img {
             max-width: 100%;
-            border: 2px solid #C0C0C0; /* Silver border around flyer image */
-            border-radius: 5px;
-            padding: 10px; /* Padding inside the image border */
-            margin-top: 20px; /* Space above the image */
+            border: 2px solid #FFD700;
+            border-radius: 10px;
+            padding: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .flyer img:hover {
+            transform: scale(1.05); /* Zoom-in effect on hover */
         }
 
         footer {
-            background-color: #333333;
-            color: #C0C0C0;
+            background-color: #2A2A2A;
+            color: #EAEAEA;
             text-align: center;
-            padding: 20px;
-            margin-top: 60px; /* Space above the footer */
+            padding: 30px 20px;
+            margin-top: 60px;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.4);
+        }
+
+        footer p {
+            margin-top: 10px;
+        }
+
+        footer a {
+            color: #FFD700;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #FFFFFF;
         }
 
     </style>
 </head>
 <body>
+
     <header>
         <img src="logo.png" alt="Big Don's Pest Control Logo">
         <h1>Big Don's Pest Control Service</h1>
@@ -180,8 +230,7 @@
     <main>
         <section class="description">
             <h2>About Us</h2>
-            <p>Welcome to Big Don's Pest Control Service, your trusted partner in keeping your home or business pest-free. 
-                With years of experience and a commitment to safe, effective solutions, we ensure your space is comfortable and secure.</p>
+            <p>Welcome to Big Don's Pest Control Service, your trusted partner in keeping your home or business pest-free. With years of experience and a commitment to safe, effective solutions, we ensure your space is comfortable and secure. Our experts specialize in a wide range of pest control services tailored to your needs.</p>
         </section>
 
         <section class="flyer">
@@ -192,6 +241,7 @@
 
     <footer>
         <p>&copy; 2024 Big Don's Pest Control Service. All Rights Reserved.</p>
+        <p><a href="mailto:contact@bigdons.com">Contact Us</a></p>
     </footer>
 
     <script>
@@ -204,8 +254,13 @@
             
             // Toggle the hamburger icon animation
             hamburger.classList.toggle('open');
+            
+            // Animate main content when menu is opened
+            var mainContent = document.querySelector('main');
+            mainContent.style.marginLeft = (nav.style.display === 'block') ? '250px' : '0';
         }
     </script>
+
 </body>
 </html>
 
