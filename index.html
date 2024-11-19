@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Big Don's Pest Control Service</title>
+
+    <!-- Google Fonts for better typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Work+Sans:wght@400;600&display=swap" rel="stylesheet">
+
     <style>
         /* General Reset */
-        body, h1, h2, p, ul {
+        body, h1, h2, p, ul, li, a {
             margin: 0;
             padding: 0;
-            font-family: 'Arial', sans-serif;
+            font-family: 'Work Sans', sans-serif;
         }
 
         body {
@@ -17,21 +21,24 @@
             color: #EAEAEA; /* Light Gray for text */
             line-height: 1.8;
             font-size: 16px;
+            overflow-x: hidden; /* Prevent horizontal scroll */
         }
 
+        /* Header Styling */
         header {
             background-color: #1F1F1F; /* Dark Gray for header */
             color: #EAEAEA;
             text-align: center;
             padding: 40px 20px;
-            border-bottom: 3px solid #EAEAEA;
-            margin-bottom: 40px;
+            border-bottom: 3px solid #FFD700; /* Golden border */
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-            transition: background-color 0.3s ease;
+            margin-bottom: 40px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
 
         header:hover {
             background-color: #333333;
+            transform: translateY(-5px); /* Subtle lift effect */
         }
 
         header img {
@@ -50,8 +57,10 @@
             margin-top: 20px;
             letter-spacing: 1px;
             text-transform: uppercase;
+            font-weight: 600;
         }
 
+        /* Navigation Menu */
         nav {
             width: 250px;
             background-color: #2A2A2A;
@@ -66,11 +75,12 @@
         }
 
         nav h2 {
-            color: #EAEAEA;
+            color: #FFD700;
             font-size: 1.5rem;
             margin-bottom: 30px;
             text-transform: uppercase;
             letter-spacing: 1px;
+            font-weight: 600;
         }
 
         nav ul {
@@ -132,6 +142,7 @@
             top: -8px;
         }
 
+        /* Main Content */
         main {
             margin-left: 250px;
             padding: 50px 40px;
@@ -140,6 +151,15 @@
 
         .description, .flyer {
             margin-bottom: 60px;
+            padding: 20px;
+            background: linear-gradient(45deg, rgba(255, 215, 0, 0.1), rgba(0, 0, 0, 0.3));
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .description:hover, .flyer:hover {
+            transform: translateY(-5px); /* Hover Lift Effect */
         }
 
         .description h2, .flyer h2 {
@@ -169,6 +189,7 @@
             transform: scale(1.05); /* Zoom-in effect on hover */
         }
 
+        /* Footer Styling */
         footer {
             background-color: #2A2A2A;
             color: #EAEAEA;
@@ -195,10 +216,39 @@
             color: #FFFFFF;
         }
 
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav {
+                width: 100%;
+                position: fixed;
+                top: 0;
+                left: 0;
+                padding: 30px 15px;
+            }
+
+            main {
+                margin-left: 0;
+                padding: 20px 15px;
+            }
+
+            .hamburger {
+                top: 20px;
+                right: 20px;
+            }
+
+            header h1 {
+                font-size: 2.2rem;
+            }
+
+            nav ul li select {
+                font-size: 0.9rem;
+            }
+        }
     </style>
 </head>
 <body>
 
+    <!-- Header Section -->
     <header>
         <img src="logo.png" alt="Big Don's Pest Control Logo">
         <h1>Big Don's Pest Control Service</h1>
@@ -211,6 +261,7 @@
         <div></div>
     </div>
 
+    <!-- Navigation Menu -->
     <nav id="navMenu">
         <h2>Our Services</h2>
         <ul>
@@ -227,35 +278,40 @@
         </ul>
     </nav>
 
+    <!-- Main Content -->
     <main>
+        <!-- About Section -->
         <section class="description">
             <h2>About Us</h2>
             <p>Welcome to Big Don's Pest Control Service, your trusted partner in keeping your home or business pest-free. With years of experience and a commitment to safe, effective solutions, we ensure your space is comfortable and secure. Our experts specialize in a wide range of pest control services tailored to your needs.</p>
         </section>
 
+        <!-- Flyer Section -->
         <section class="flyer">
             <h2>Our Flyer</h2>
             <img src="IMG_1981.jpg" alt="Big Don's Pest Control Flyer">
         </section>
     </main>
 
+    <!-- Footer Section -->
     <footer>
         <p>&copy; 2024 Big Don's Pest Control Service. All Rights Reserved.</p>
         <p><a href="mailto:contact@bigdons.com">Contact Us</a></p>
     </footer>
 
     <script>
+        // Toggle Navigation Menu Function
         function toggleMenu() {
             var nav = document.getElementById('navMenu');
             var hamburger = document.querySelector('.hamburger');
 
-            // Toggle the menu visibility
+            // Toggle menu visibility
             nav.style.display = (nav.style.display === 'block') ? 'none' : 'block';
             
-            // Toggle the hamburger icon animation
+            // Toggle hamburger animation
             hamburger.classList.toggle('open');
             
-            // Animate main content when menu is opened
+            // Animate main content margin when menu is toggled
             var mainContent = document.querySelector('main');
             mainContent.style.marginLeft = (nav.style.display === 'block') ? '250px' : '0';
         }
